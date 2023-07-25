@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Comic_Neue } from 'next/font/google'
 import NavMenu from './NavMenu'
+import AuthProvider from './AuthProvider'
 
 const comic = Comic_Neue({ subsets: ['latin'], weight: ['300', '400', '700'] })
 
@@ -16,13 +17,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={comic.className}>
-        <NavMenu />
-        <div className='mt-[65px] p-12'>
-          {children}
-        </div>
-      </body>
-    </html>
+    <AuthProvider>
+      <html lang="en">
+        <body className={comic.className}>
+          <NavMenu />
+          <div className='mt-[65px] p-12'>
+            {children}
+          </div>
+        </body>
+      </html>
+    </AuthProvider>
   )
 }

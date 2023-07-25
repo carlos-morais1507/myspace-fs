@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import React from 'react'
+import { SignInButton } from "@/components/buttons";
 
 const NavMenu = () => {
   return (
@@ -14,7 +15,7 @@ const NavMenu = () => {
           alt="NextSpace Logo"
         />
       </Link>
-      <ul className="flex gap-3 font-bold">
+      <ul className="flex gap-3 font-bold underline items-center">
         <li>
           <Link href={'/about'}>About</Link>
         </li>
@@ -23,6 +24,9 @@ const NavMenu = () => {
         </li>
         <li>
           <Link href={'/users'}>Users</Link>
+        </li>
+        <li className="ml-5">
+          <SignInButton />
         </li>
       </ul>     
     </nav>
