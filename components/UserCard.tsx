@@ -18,7 +18,7 @@ const UserCard = ({ id, name, age, image }: Props) => {
       <div>
         <h3 className='font-bold text-lg'><Link href={`/users/${id}`}>{name}</Link></h3>
       </div>
-      <p>Age: {age}</p>
+      <p>Idade: {age}</p>
     </div>
   );
 }
