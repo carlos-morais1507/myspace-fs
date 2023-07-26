@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 const About = async () => {
   return (
     <main>
-      <h1 className='font-bold text-3xl'>About</h1>
-      <p>We are a social media!</p>
+      <h1 className='font-bold text-3xl'>Sobre nós</h1>
+      <p>Nós somos uma rede social! Oi 👋</p>
     </main>
   )
 }

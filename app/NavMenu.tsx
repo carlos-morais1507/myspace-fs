@@ -17,13 +17,13 @@ const NavMenu = () => {
       </Link>
       <ul className="flex gap-3 font-bold underline items-center">
         <li>
-          <Link href={'/about'}>About</Link>
+          <Link href={'/about'}>Sobre</Link>
         </li>
         <li>
           <Link href={'/blog'}>Blog</Link>
         </li>
         <li>
-          <Link href={'/users'}>Users</Link>
+          <Link href={'/users'}>Pessoas</Link>
         </li>
         <li className="ml-5">
           <SignInButton />

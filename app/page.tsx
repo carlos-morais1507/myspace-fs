@@ -9,8 +9,9 @@ export default async function Home() {
   }
  
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      
+    <main className="min-h-screen">
+      <h1 className='text-2xl'>Opa, <span className='font-bold text-blue-600'>{session.user?.name}!</span></h1>
+      <p>Você tá loggado!</p>
     </main>
   )
 }

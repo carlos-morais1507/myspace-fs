@@ -23,14 +23,14 @@ export function SignInButton() {
           alt="Your Name"
         />
       </Link>
-      <button onClick={() => signOut()} className="bg-white text-black underline p-1">Sign out</button>
+      <button onClick={() => signOut()} className="bg-white text-black underline p-1">Sair</button>
       </div>
     )
   }
 
-  return <button onClick={() => signIn()} className="bg-white text-black underline p-1">Sign In</button>
+  return <button onClick={() => signIn()} className="bg-white text-black underline p-1">Entrar</button>
 }
 
 export function SignOutButton() {
-  return <button onClick={() => signOut()} className="bg-white text-black underline p-1">Sign out</button>
+  return <button onClick={() => signOut()} className="bg-white text-black underline p-1">Sair</button>
 }
