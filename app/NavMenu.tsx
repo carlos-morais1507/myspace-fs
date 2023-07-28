@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+
 
 import React from 'react'
 import { SignInButton } from "@/components/buttons";
@@ -8,7 +8,7 @@ const NavMenu = () => {
   return (
     <nav className="fixed top-0 z-50 bg-blue-600 text-white flex h-[65px] w-full items-center justify-around">
       <Link href={'/'}>
-        <Image
+        <img
           src="/logo.svg"
           width={216}
           height={30}

@@ -1,8 +1,6 @@
 'use client';
-
 import { useSession, signIn, signOut } from "next-auth/react";
 import Link from 'next/link';
-import Image from 'next/image';
 
 export function SignInButton() {
   const { data: session, status } = useSession();
@@ -16,7 +14,7 @@ export function SignInButton() {
     return (
       <div className="flex gap-2">
       <Link href={`/dashboard`}>
-        <Image
+        <img
           src={session.user?.image ?? '/mememan.webp'}
           width={32}
           height={32}
