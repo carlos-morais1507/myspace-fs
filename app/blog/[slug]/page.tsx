@@ -11,7 +11,7 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  const posts: Post[] = await fetch('http://localhost:3000/api/content', {cache: 'default'}).then(
+  const posts: Post[] = await fetch('http://myspace-fs.vercel.app/api/content', {cache: 'default'}).then(
     (res) => res.json()
   );
 
@@ -22,7 +22,7 @@ export async function generateStaticParams() {
 }
 
 const BlogPostPage = async ({ params }: Props) => {
-  const posts: Post[] = await fetch('http://localhost:3000/api/content', {cache: 'default'}).then(
+  const posts: Post[] = await fetch('http://myspace-fs.vercel.app/api/content', {cache: 'default'}).then(
     (res) => res.json()
   );
   const post = posts.find((post) => post.slug === params.slug)!;

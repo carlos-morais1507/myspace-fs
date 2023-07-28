@@ -2,6 +2,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "../api/auth/[...nextauth]/route";
 import { prisma } from "@/lib/prisma";
 import ProfileForm from "./ProfileForm";
+import { signIn } from "next-auth/react";
 
 export default async function Dashboard() {
   const session = await getServerSession(authOptions);
@@ -10,7 +11,7 @@ export default async function Dashboard() {
     return (
       <>
         <h2 className='mb-2 text-2xl'>Oi! Vi que você não tá loggado 😢</h2>
-        <a className='mt-2 p-2 border-2 border-black' href={'http://localhost:3000/api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2F'}>Vamo Loggar?</a>
+        <button className='mt-2 p-2 border-2 border-black' onClick={() => signIn()}>Vamo Loggar?</button>
       </>
     )
   }
